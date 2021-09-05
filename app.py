@@ -49,9 +49,7 @@ def Lin_reg():
     mydict2=[]
     if request.method=="POST":
         split_value=request.form.get('sp')
-        print(split_value)
         seed_value = request.form.get('seed')
-        print(seed_value)
         vif_df = pd.DataFrame()
         vif_df['vif'] = [variance_inflation_factor(arr, i) for i in range(arr.shape[1])]
         vif_df['feature'] = x.columns
