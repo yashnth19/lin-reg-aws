@@ -8,8 +8,8 @@ from sklearn.linear_model import Ridge, Lasso, RidgeCV, LassoCV,ElasticNet,Elast
 from sklearn.model_selection import train_test_split
 from statsmodels.stats.outliers_influence import variance_inflation_factor
 app = Flask(__name__)
-
-df =pd.read_csv("ai4i2020.csv")
+url='https://raw.githubusercontent.com/yashnth19/linear_regression-task/main/ai4i2020.csv'
+df =pd.read_csv(url)
 y=df['Air temperature [K]']
 x=df.drop(columns=['Air temperature [K]','UDI','Product ID','Type'])
 cols=[i for i in x.columns]
