@@ -16,7 +16,7 @@ cols=[i for i in x.columns]
 scaler =StandardScaler()
 arr=scaler.fit_transform(x)
 lr=LinearRegression()
-@app.route('/',methods=['GET'])  # route to display the home page
+@app.route('/',methods=['POST','GET'])  # route to display the home page
 @cross_origin() #not required for local deployment
 def homePage():
     return render_template("index.html")
