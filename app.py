@@ -1,6 +1,6 @@
 from flask import Flask, render_template, request,jsonify
 from flask_cors import CORS,cross_origin #falsk cors is used to run from different regions
-import requests
+#import requests
 import pandas as pd
 import numpy as np
 from sklearn.preprocessing import StandardScaler
