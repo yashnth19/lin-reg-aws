@@ -104,8 +104,8 @@ def Lin_reg():
     return render_template('results2.html',mydict2=mydict2)
 
 if __name__ == "__main__":
-	app.run(debug=True)
+	#app.run(debug=True)
 	port = int(os.getenv("PORT"))
-	    host = '0.0.0.0'
-	    httpd = simple_server.make_server(host=host, port=port, app=app)
-	    httpd.serve_forever()
+	host = '0.0.0.0'
+	httpd = simple_server.make_server(host=host, port=port, app=app)
+	httpd.serve_forever()
